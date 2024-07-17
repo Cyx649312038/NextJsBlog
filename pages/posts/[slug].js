@@ -1,7 +1,22 @@
 import PostContent from "@/components/posts/post-detail/post-content";
 import { getPostData, getAllPostFiles } from "@/lib/posts-util";
 import Head from "next/head";
+import { useEffect } from "react";
+import { getSession, useSession } from "next-auth/react";
 export default function PostDetail(props) {
+  const { data: session } = useSession();
+  useEffect(() => {
+    if (!session) {
+      window.location.href = "/auth";
+    }
+  });
+  // useEffect(() => {
+  //   getSession().then((session) => {
+  //     if(!session) {
+  //       window.location.href= "/auth"
+  //     }
+  //   });
+  // });
   return (
     <>
     <Head>

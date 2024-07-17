@@ -6,9 +6,11 @@ module.exports = (phase) => {
     return {
       env: {
         mongodb_username: "649312038",
-        mongodb_password: "FgvoUv8FqucVLD8a",
+        mongodb_password: "wpq1GsfleXCXkrhB",
         mongodb_clustername: "cluster0",
         mongodb_database: "my-site",
+        NEXTAUTH_SECRET:"LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx6gts=",
+        NEXTAUTH_URL: "next-js-blog-n1zucfp6o-cyx649312038s-projects.vercel.app"
       },
     };
   }
@@ -16,9 +18,11 @@ module.exports = (phase) => {
   return {
     env: {
       mongodb_username: "649312038",
-      mongodb_password: "FgvoUv8FqucVLD8a@cluster0",
+      mongodb_password: "wpq1GsfleXCXkrhB",
       mongodb_clustername: "Cluster0",
       mongodb_database: "my-site",
+      NEXTAUTH_SECRET:"LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx6gts=",
+      NEXTAUTH_URL: "next-js-blog-n1zucfp6o-cyx649312038s-projects.vercel.app"
     },
   };
 };
