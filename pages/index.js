@@ -6,11 +6,19 @@ import { useEffect } from "react";
 import { getSession, useSession } from "next-auth/react";
 export default function HomePage(props) {
   // 也可以放到getserverside里面避免闪烁跳转
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
+  // useEffect(() => {
+  //   console.log("homeSession", session);
+  //   if (!session) {
+  //     window.location.href = "/auth";
+  //   }
+  // });
   useEffect(() => {
-    if (!session) {
-      window.location.href = "/auth";
-    }
+    getSession().then((session) => {
+      if(!session) {
+        window.location.href= "/auth"
+      }
+    });
   });
   return (
     <>

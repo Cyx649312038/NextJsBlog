@@ -6,7 +6,7 @@ export default function AuthPage() {
 
 export async function getServerSideProps(context) {
   const session = await getSession({ req: context.req });
-  console.log("sessiontest", session);
+  console.log("authSession", session);
   if (session) {
     return {
       redirect: {
